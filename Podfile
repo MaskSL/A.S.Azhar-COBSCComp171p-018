@@ -16,5 +16,9 @@ pod 'Firebase/Core'
     inherit! :search_paths
     # Pods for testing
   end
+  
+  pod 'Firebase/Auth'
+ pod 'Nuke', '~> 7.0'
+ pod 'Firebase/Database'
 
 end
