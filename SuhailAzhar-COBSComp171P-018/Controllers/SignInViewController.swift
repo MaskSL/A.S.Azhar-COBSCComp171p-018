@@ -23,7 +23,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func loginClick(_ sender: Any) {
-        
+        //validations
         if email.text == "" {
             alert(message: "Please enter email")
             return
@@ -48,9 +48,6 @@ class SignInViewController: UIViewController {
             }
             
             strongSelf.performSegue(withIdentifier: "toHomeSqgue", sender: nil)
-            
-            
-            
             
         }
         

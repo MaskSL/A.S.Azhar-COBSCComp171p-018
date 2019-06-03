@@ -11,12 +11,16 @@ import Firebase
 
 class FriendViewController: UIViewController {
     
+    
     var studentsList : [Student] = []
     var ref: DatabaseReference!
     @IBOutlet weak var tableview: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Students"
 
         ref = Database.database().reference()
         
@@ -27,27 +31,37 @@ class FriendViewController: UIViewController {
         getStudentData()
     }
     
+    //Function to get Student Data
     func getStudentData() {
         
         let friendsRef = ref.child("students");
         
         friendsRef.observe(.value) { snapshot in
+            self.activityIndicator.stopAnimating()
             for child in snapshot.children.allObjects as! [DataSnapshot] {
                 
                 let studentDic = child.value as! NSDictionary
                 
+                //Assign values
                 let first_name = studentDic["first_name"] as! String
                 let last_name = studentDic["last_name"] as! String
                 let city = studentDic["city"] as? String
                 let birthday = studentDic["birthday"] as? String
                 let imageUrl = studentDic["imageUrl"] as? String
-                let fb_profile_url = studentDic["fb_profile_url"] as? String
+                let fb_profile_url = studentDic["facebookUrl"] as? String
+                let gender = studentDic["gender"] as? String
+                let phoneNo = studentDic["phoneNumber"] as? String
                 
+                //Set students into Array
                 let student = Student(
                     first_name: first_name,
                     last_name: last_name,
                     city: city ?? "",
-                    image_url: imageUrl ?? ""
+                    image_url: imageUrl ?? "",
+                    dob: birthday ?? "",
+                    fbUrl: fb_profile_url ?? "",
+                    gender: gender ?? "",
+                    phoneNumber: phoneNo ?? ""
                 )
                 
                 self.studentsList.append(student)
@@ -58,7 +72,7 @@ class FriendViewController: UIViewController {
                 
                 
             }
-            
+            //Load data into table view
             self.tableview.reloadData()
         }
         

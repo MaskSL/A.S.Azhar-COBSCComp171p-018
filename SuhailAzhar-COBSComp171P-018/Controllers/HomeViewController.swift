@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    //Button click activating segues
+    
     @IBAction func studentClick(_ sender: Any) {
         performSegue(withIdentifier: "friendSegue", sender: nil)
     }
@@ -28,4 +29,9 @@ class HomeViewController: UIViewController {
     @IBAction func myProfileClcik(_ sender: Any) {
         performSegue(withIdentifier: "myProfileSegue", sender: nil)
     }
+    
+    
+    
+    
+    
 }

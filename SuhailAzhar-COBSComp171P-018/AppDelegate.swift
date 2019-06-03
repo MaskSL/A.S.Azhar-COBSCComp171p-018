@@ -21,19 +21,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
+        // decide which view controller is the frst viewcontroller
         let user = Auth.auth().currentUser
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
+        //If user not logged in
         if (user == nil) {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let initialViewController = storyboard.instantiateViewController(withIdentifier: "signInVC")
-        
-        self.window?.rootViewController = initialViewController
-        self.window?.makeKeyAndVisible()
+            
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            //set viewcontroller to SignInView Controller
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "signInVC")
+            
+            self.window?.rootViewController = initialViewController
+            self.window?.makeKeyAndVisible()
             
         } else {
+            //If ser logged in go to home view controller
             let storyboard = UIStoryboard(name: "Home", bundle: nil)
             
             let initialViewController = storyboard.instantiateViewController(withIdentifier: "homeNC")

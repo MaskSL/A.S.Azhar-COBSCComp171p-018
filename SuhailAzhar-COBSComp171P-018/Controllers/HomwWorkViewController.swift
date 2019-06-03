@@ -10,13 +10,15 @@ import UIKit
 
 class HomwWorkViewController: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "My Notes"
         
-        
-        
+        /tableView.dataSource = self
         
         
     }
@@ -24,6 +26,8 @@ class HomwWorkViewController: UIViewController {
     @IBAction func onAddNewTap(_ sender: Any) {
         performSegue(withIdentifier: "showAddNewSegue", sender: nil)
     }
+    
+  
     
    
 }

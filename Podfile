@@ -18,7 +18,7 @@ pod 'Firebase/Core'
   end
   
   pod 'Firebase/Auth'
- pod 'Nuke', '~> 7.0'
- pod 'Firebase/Database'
+  pod 'Nuke', '~> 7.0'
+  pod 'Firebase/Database'
 
 end

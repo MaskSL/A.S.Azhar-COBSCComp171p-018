@@ -33,7 +33,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="D6j-jF-Ijo" firstAttribute="top" secondItem="k0X-dy-Lyp" secondAttribute="top" id="Me2-ng-0l5"/>
                             <constraint firstItem="D6j-jF-Ijo" firstAttribute="leading" secondItem="k0X-dy-Lyp" secondAttribute="leading" id="NxZ-P9-rgC"/>
@@ -52,6 +52,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="tableView" destination="D6j-jF-Ijo" id="oFj-TB-3Ci"/>
                         <segue destination="VAM-33-DqS" kind="show" identifier="showAddNewSegue" id="35V-EI-Nuw"/>
                     </connections>
                 </viewController>
@@ -66,7 +67,7 @@
                     <view key="view" contentMode="scaleToFill" id="Qb1-Jl-oLs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="En4-Vf-yIQ"/>
                     </view>
                 </viewController>
