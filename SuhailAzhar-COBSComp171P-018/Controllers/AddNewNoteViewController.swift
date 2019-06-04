@@ -31,11 +31,11 @@ class AddNewNoteViewController: UIViewController {
         
         //If there are no saved tasks then add new
         if (savedList == nil) {
-            UserDefaults.standard.encode(for:[homeWork], using: String(describing: HomeWorkModel.self))
+            UserDefaults.standard.encode(for:[homeWork], using: "savedHomeworks")
         } else {
             //If there were previously saved tasks then append new task to the array
             savedList?.append(homeWork)
-            UserDefaults.standard.encode(for:savedList, using: String(describing: HomeWorkModel.self))
+            UserDefaults.standard.encode(for:savedList, using: "savedHomeworks")
         }
         
         navigationController?.popViewController(animated: true)
