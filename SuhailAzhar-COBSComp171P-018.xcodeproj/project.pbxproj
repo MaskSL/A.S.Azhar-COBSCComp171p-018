@@ -21,6 +21,8 @@
 		1A08511C229628D900CE9D2D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08511B229628D900CE9D2D /* MyProfileViewController.swift */; };
 		1A6AE56422A350D0007FC269 /* HomwWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE56322A350D0007FC269 /* HomwWorkViewController.swift */; };
 		1A6AE56622A352F8007FC269 /* AddNewNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6AE56522A352F8007FC269 /* AddNewNoteViewController.swift */; };
+		1ACC057222A5E6660048625D /* HomeWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC057122A5E6660048625D /* HomeWorkModel.swift */; };
+		1ACC057622A5E72F0048625D /* HomeWorkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACC057522A5E72F0048625D /* HomeWorkTableViewCell.swift */; };
 		85919A352608FAF7B7D4E904 /* Pods_SuhailAzhar_COBSComp171P_018Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213B0F67089D3804944A62B6 /* Pods_SuhailAzhar_COBSComp171P_018Tests.framework */; };
 		8C4CF76C2295721A00127234 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CF76B2295721A00127234 /* AppDelegate.swift */; };
 		8C4CF76E2295721A00127234 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CF76D2295721A00127234 /* ViewController.swift */; };
@@ -67,6 +69,8 @@
 		1A08511B229628D900CE9D2D /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 		1A6AE56322A350D0007FC269 /* HomwWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomwWorkViewController.swift; sourceTree = "<group>"; };
 		1A6AE56522A352F8007FC269 /* AddNewNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewNoteViewController.swift; sourceTree = "<group>"; };
+		1ACC057122A5E6660048625D /* HomeWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkModel.swift; sourceTree = "<group>"; };
+		1ACC057522A5E72F0048625D /* HomeWorkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorkTableViewCell.swift; sourceTree = "<group>"; };
 		1FB768FF9F59E57C20D8EE09 /* Pods-SuhailAzhar-COBSComp171P-018.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuhailAzhar-COBSComp171P-018.release.xcconfig"; path = "Target Support Files/Pods-SuhailAzhar-COBSComp171P-018/Pods-SuhailAzhar-COBSComp171P-018.release.xcconfig"; sourceTree = "<group>"; };
 		213B0F67089D3804944A62B6 /* Pods_SuhailAzhar_COBSComp171P_018Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuhailAzhar_COBSComp171P_018Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CE05FB0FFE45C242418DE67 /* Pods_SuhailAzhar_COBSComp171P_018UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuhailAzhar_COBSComp171P_018UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				1A08510E22961D7200CE9D2D /* StudentTableViewCell.swift */,
+				1ACC057522A5E72F0048625D /* HomeWorkTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				1A08511122961DF200CE9D2D /* Student.swift */,
+				1ACC057122A5E6660048625D /* HomeWorkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -485,9 +491,11 @@
 				1A08511C229628D900CE9D2D /* MyProfileViewController.swift in Sources */,
 				1A0851072296167600CE9D2D /* SignInViewController.swift in Sources */,
 				1A08511222961DF200CE9D2D /* Student.swift in Sources */,
+				1ACC057222A5E6660048625D /* HomeWorkModel.swift in Sources */,
 				1A0851182296270800CE9D2D /* StudentDetailViewController.swift in Sources */,
 				1A08510F22961D7200CE9D2D /* StudentTableViewCell.swift in Sources */,
 				8C4CF76E2295721A00127234 /* ViewController.swift in Sources */,
+				1ACC057622A5E72F0048625D /* HomeWorkTableViewCell.swift in Sources */,
 				1A6AE56422A350D0007FC269 /* HomwWorkViewController.swift in Sources */,
 				1A0851162296227300CE9D2D /* FriendViewController.swift in Sources */,
 				8C4CF76C2295721A00127234 /* AppDelegate.swift in Sources */,
