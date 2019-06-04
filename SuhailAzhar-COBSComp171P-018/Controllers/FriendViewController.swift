@@ -52,7 +52,7 @@ class FriendViewController: UIViewController {
                 let gender = studentDic["gender"] as? String
                 let phoneNo = studentDic["phoneNumber"] as? String
                 
-                //Set students into Array
+                //Set default values if no values retrieved
                 let student = Student(
                     first_name: first_name,
                     last_name: last_name,

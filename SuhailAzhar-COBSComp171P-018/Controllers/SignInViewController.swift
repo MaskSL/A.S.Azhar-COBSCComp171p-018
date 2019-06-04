@@ -39,14 +39,17 @@ class SignInViewController: UIViewController {
             return
         }
         
+        //Sign in with Email and Relevant password from Firebase
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] user, error in
             guard let strongSelf = self else { return }
             
+            //If there is an error
             if error != nil {
                 strongSelf.alert(message: error?.localizedDescription ?? "error")
                 return
             }
             
+            //If successful then go to Home page
             strongSelf.performSegue(withIdentifier: "toHomeSqgue", sender: nil)
             
         }
@@ -56,7 +59,7 @@ class SignInViewController: UIViewController {
         
     }
     
- 
+    //When Click Forogot Password button
     @IBAction func forgotPassword(_ sender: Any) {
     }
     

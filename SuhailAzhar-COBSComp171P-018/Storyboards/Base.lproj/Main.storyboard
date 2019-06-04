@@ -50,18 +50,18 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmb-ye-n9t">
                                 <rect key="frame" x="137.5" y="315" width="100" height="30"/>
-                                <color key="backgroundColor" red="0.25168705699999999" green="0.52768997080000002" blue="0.66924441499999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Prn-4n-ujB"/>
                                 </constraints>
                                 <state key="normal" title="Login">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="loginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3H3-jx-McF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2N6-CQ-IFr">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nibm_logo" translatesAutoresizingMaskIntoConstraints="NO" id="2N6-CQ-IFr">
                                 <rect key="frame" x="112.5" y="36" width="150" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="i1e-mA-2qs"/>
@@ -69,13 +69,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHr-bx-kVj">
-                                <rect key="frame" x="130" y="393" width="115" height="30"/>
-                                <state key="normal" title="Forgot Password">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="124" y="393" width="127" height="30"/>
+                                <state key="normal" title="Forgot Password ?">
+                                    <color key="titleColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="forgotPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtK-Ww-ual"/>
-                                    <segue destination="P42-NK-CwJ" kind="show" identifier="toChangePassword" id="jdC-ik-ug1"/>
+                                    <segue destination="P42-NK-CwJ" kind="showDetail" identifier="toChangePassword" id="jdC-ik-ug1"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -110,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="-33" y="117"/>
         </scene>
-        <!--View Controller-->
+        <!--Forgot Password View Controller-->
         <scene sceneID="K5k-Dn-wNf">
             <objects>
-                <viewController id="P42-NK-CwJ" sceneMemberID="viewController">
+                <viewController id="P42-NK-CwJ" customClass="ForgotPasswordViewController" customModule="SuhailAzhar_COBSComp171P_018" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oOU-d7-iOE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,11 +137,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gR8-sd-8g0">
-                                <rect key="frame" x="126" y="341" width="123" height="30"/>
+                                <rect key="frame" x="87.5" y="341" width="200" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Icm-ce-uie"/>
+                                </constraints>
                                 <state key="normal" title="Change Password">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="changePassowrdclICK:" destination="P42-NK-CwJ" eventType="touchUpInside" id="XfG-Nt-HVR"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="etf-mn-7Ga">
                                 <rect key="frame" x="212" y="188" width="113" height="30"/>
@@ -155,24 +161,31 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zTz-zD-HP3">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonClick:" destination="P42-NK-CwJ" eventType="touchUpInside" id="bzW-BN-tgO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46202266219999999" green="0.83828371759999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xom-eU-Kvs" firstAttribute="leading" secondItem="BOc-S9-Jwc" secondAttribute="trailing" constant="61" id="35g-2q-DTk"/>
                             <constraint firstItem="xom-eU-Kvs" firstAttribute="top" secondItem="etf-mn-7Ga" secondAttribute="bottom" constant="45" id="8EL-vO-tc7"/>
-                            <constraint firstItem="QIe-XD-6eV" firstAttribute="bottom" secondItem="gR8-sd-8g0" secondAttribute="bottom" constant="296" id="Cqb-nh-UTP"/>
                             <constraint firstItem="oEt-V5-3vr" firstAttribute="top" secondItem="QIe-XD-6eV" secondAttribute="top" constant="65" id="DMa-hZ-5Fh"/>
                             <constraint firstItem="QIe-XD-6eV" firstAttribute="trailing" secondItem="xom-eU-Kvs" secondAttribute="trailing" constant="50" id="IRf-MG-azX"/>
-                            <constraint firstItem="gR8-sd-8g0" firstAttribute="leading" secondItem="QIe-XD-6eV" secondAttribute="leading" constant="126" id="Nk6-Lc-6Fs"/>
                             <constraint firstItem="QIe-XD-6eV" firstAttribute="trailing" secondItem="oEt-V5-3vr" secondAttribute="trailing" constant="119" id="PC6-Nf-W0H"/>
                             <constraint firstItem="oEt-V5-3vr" firstAttribute="leading" secondItem="QIe-XD-6eV" secondAttribute="leading" constant="118" id="QOO-r6-eL9"/>
                             <constraint firstItem="xom-eU-Kvs" firstAttribute="leading" secondItem="BOc-S9-Jwc" secondAttribute="trailing" constant="61" id="Rq1-hY-FF0"/>
                             <constraint firstItem="etf-mn-7Ga" firstAttribute="top" secondItem="oEt-V5-3vr" secondAttribute="bottom" constant="82" id="TXp-Jq-TrO"/>
                             <constraint firstItem="QIe-XD-6eV" firstAttribute="trailing" secondItem="etf-mn-7Ga" secondAttribute="trailing" constant="50" id="UXR-o9-ZkT"/>
+                            <constraint firstItem="zTz-zD-HP3" firstAttribute="top" secondItem="QIe-XD-6eV" secondAttribute="top" id="Zib-Hu-2GK"/>
                             <constraint firstItem="etf-mn-7Ga" firstAttribute="leading" secondItem="5Ws-93-sRJ" secondAttribute="trailing" constant="92" id="aoZ-tS-WH4"/>
+                            <constraint firstItem="gR8-sd-8g0" firstAttribute="centerX" secondItem="oOU-d7-iOE" secondAttribute="centerX" id="cmc-sq-RPR"/>
                             <constraint firstItem="5Ws-93-sRJ" firstAttribute="top" secondItem="QIe-XD-6eV" secondAttribute="top" constant="173" id="dnG-Mc-vLT"/>
+                            <constraint firstItem="zTz-zD-HP3" firstAttribute="leading" secondItem="QIe-XD-6eV" secondAttribute="leading" constant="16" id="fBA-XK-h2o"/>
                             <constraint firstItem="5Ws-93-sRJ" firstAttribute="leading" secondItem="QIe-XD-6eV" secondAttribute="leading" constant="46" id="fBI-UW-2jO"/>
-                            <constraint firstItem="QIe-XD-6eV" firstAttribute="trailing" secondItem="gR8-sd-8g0" secondAttribute="trailing" constant="126" id="gPD-NI-Tln"/>
                             <constraint firstItem="5Ws-93-sRJ" firstAttribute="leading" secondItem="QIe-XD-6eV" secondAttribute="leading" constant="46" id="guA-u9-as9"/>
                             <constraint firstItem="BOc-S9-Jwc" firstAttribute="leading" secondItem="QIe-XD-6eV" secondAttribute="leading" constant="16" id="nN8-5c-dA9"/>
                             <constraint firstItem="etf-mn-7Ga" firstAttribute="leading" secondItem="5Ws-93-sRJ" secondAttribute="trailing" constant="92" id="nPa-e7-7eV"/>
@@ -183,6 +196,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QIe-XD-6eV"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTP" destination="xom-eU-Kvs" id="l77-he-tTy"/>
+                        <outlet property="passwordTP" destination="etf-mn-7Ga" id="NvZ-lU-Cal"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AVm-eM-NXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,4 +214,7 @@
             <point key="canvasLocation" x="780" y="-111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="nibm_logo" width="300" height="172"/>
+    </resources>
 </document>
