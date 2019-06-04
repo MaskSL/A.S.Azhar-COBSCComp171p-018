@@ -21,15 +21,19 @@ class AddNewNoteViewController: UIViewController {
         
     }
     
+    //When Add Task cliceked
     @IBAction func addButtonTap(_ sender: Any) {
-        
+        //Set the texts from the text fields.
         let homeWork = HomeWorkModel(title: titleTxtField.text ?? "", desc: descTextField.text ?? "")
         
-        var savedList = UserDefaults.standard.decode(for: [HomeWorkModel].self, using: String(describing: HomeWorkModel.self))
+        //Declare variable to read saved tasks from key savedHomeworks
+        var savedList = UserDefaults.standard.decode(for: [HomeWorkModel].self, using: "savedHomeworks")
         
+        //If there are no saved tasks then add new
         if (savedList == nil) {
             UserDefaults.standard.encode(for:[homeWork], using: String(describing: HomeWorkModel.self))
         } else {
+            //If there were previously saved tasks then append new task to the array
             savedList?.append(homeWork)
             UserDefaults.standard.encode(for:savedList, using: String(describing: HomeWorkModel.self))
         }

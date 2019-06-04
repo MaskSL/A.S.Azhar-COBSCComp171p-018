@@ -13,6 +13,7 @@ class HomwWorkViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    //Declare hoeework model array
     var homeworkList = [HomeWorkModel]()
     
     override func viewDidLoad() {
@@ -28,7 +29,8 @@ class HomwWorkViewController: UIViewController, UITableViewDataSource {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let savedHomeWorkList = UserDefaults.standard.decode(for: [HomeWorkModel].self, using: String(describing: HomeWorkModel.self))
+        //Display saved homeowkr lists based on key savedHomeworks
+        let savedHomeWorkList = UserDefaults.standard.decode(for: [HomeWorkModel].self, using: "savedHomeworks")
         
         homeworkList.removeAll()
         
@@ -38,14 +40,17 @@ class HomwWorkViewController: UIViewController, UITableViewDataSource {
         
     }
     
+    //When click add new task button
     @IBAction func onAddNewTap(_ sender: Any) {
         performSegue(withIdentifier: "showAddNewSegue", sender: nil)
     }
     
+    //Display honework list
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeworkList.count
     }
     
+    //Display based on indexes to the labelspresent.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "noteCell", for: indexPath) as! HomeWorkTableViewCell
         

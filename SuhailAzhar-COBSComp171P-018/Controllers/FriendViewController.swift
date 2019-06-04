@@ -11,7 +11,7 @@ import Firebase
 
 class FriendViewController: UIViewController {
     
-    
+    //Declare student array
     var studentsList : [Student] = []
     var ref: DatabaseReference!
     @IBOutlet weak var tableview: UITableView!
@@ -27,7 +27,7 @@ class FriendViewController: UIViewController {
         tableview.dataSource = self
         tableview.delegate = self
         
-        
+        //Call function
         getStudentData()
     }
     
@@ -36,6 +36,7 @@ class FriendViewController: UIViewController {
         
         let friendsRef = ref.child("students");
         
+        //Firebase code, get student data
         friendsRef.observe(.value) { snapshot in
             self.activityIndicator.stopAnimating()
             for child in snapshot.children.allObjects as! [DataSnapshot] {
@@ -86,7 +87,7 @@ extension FriendViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return studentsList.count
     }
-    
+    //Get data based on student cell selected
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "studentCell", for: indexPath) as! StudentTableViewCell
         
@@ -95,10 +96,10 @@ extension FriendViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.setUpWithData(student: studentsList[indexPath.row])
         
-        
+        //Return values
         return cell
     }
-    
+    //Navigates to student details page when  cell is clicked
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "studentDetailSegue", sender: studentsList[indexPath.row])
     }

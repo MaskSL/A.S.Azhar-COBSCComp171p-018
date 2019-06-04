@@ -8,6 +8,8 @@
 
 import Foundation
 
+//Homework Model
+
 struct HomeWorkModel: Codable {
     
     var title: String

@@ -19,8 +19,10 @@ class MyProfileViewController: UIViewController {
 
         title = "My profile"
         
+        //Container view default hidden. Can be seen only if the biometrics pass.
         containerView.isHidden  = true
         
+        //Call authentication function
         authenticationFingerPrint()
         
     }
@@ -32,10 +34,12 @@ class MyProfileViewController: UIViewController {
         let authReason = "Please use Touch ID to access Your Account"
         var authError : NSError?
         
+        
         if authContext.canEvaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, error: &authError){
             
             authContext.evaluatePolicy(LAPolicy.deviceOwnerAuthenticationWithBiometrics, localizedReason: authReason, reply: { (success,error) -> Void in
                 
+                //If error display message
                 if error != nil{
                     DispatchQueue.main.async {
                         self.alert(message: "Authentication Failed")
@@ -44,7 +48,7 @@ class MyProfileViewController: UIViewController {
                     return
                 }
                 
-                
+                //IF Success then the View can be seen
                 if success{
                     //Go to My Account Page
                     DispatchQueue.main.async {

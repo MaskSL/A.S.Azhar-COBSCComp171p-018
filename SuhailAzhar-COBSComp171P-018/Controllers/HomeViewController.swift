@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
 
         title = "Home"
         
+        //Add button layers to make a little circular edges
         studentsButton.layer.cornerRadius = 16
         homeWorkButton.layer.cornerRadius = 16
         profileButton.layer.cornerRadius = 16

@@ -11,7 +11,7 @@ import Nuke
 
 class StudentDetailViewController: UIViewController {
     
-    
+    //Declare Labels
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var dobLabel: UILabel!
@@ -27,7 +27,7 @@ class StudentDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        //If student exists then display student details
         if student != nil {
             
             title = student?.first_name
