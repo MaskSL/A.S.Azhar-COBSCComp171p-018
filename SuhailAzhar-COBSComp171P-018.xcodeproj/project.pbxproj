@@ -32,7 +32,6 @@
 		8C4CF7762295721B00127234 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4CF7742295721B00127234 /* LaunchScreen.storyboard */; };
 		8C4CF7812295721C00127234 /* SuhailAzhar_COBSComp171P_018Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CF7802295721C00127234 /* SuhailAzhar_COBSComp171P_018Tests.swift */; };
 		8C4CF78C2295721C00127234 /* SuhailAzhar_COBSComp171P_018UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4CF78B2295721C00127234 /* SuhailAzhar_COBSComp171P_018UITests.swift */; };
-		8C4CF7A422957A5C00127234 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4CF7A322957A5C00127234 /* SignUp.storyboard */; };
 		E4115D1C938EEFD6FAAA50FB /* Pods_SuhailAzhar_COBSComp171P_018.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA2F6D60238A1F4EDC72AFB0 /* Pods_SuhailAzhar_COBSComp171P_018.framework */; };
 		FF708A6F056F786A9C79C94E /* Pods_SuhailAzhar_COBSComp171P_018UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CE05FB0FFE45C242418DE67 /* Pods_SuhailAzhar_COBSComp171P_018UITests.framework */; };
 /* End PBXBuildFile section */
@@ -90,7 +89,6 @@
 		8C4CF7872295721C00127234 /* SuhailAzhar-COBSComp171P-018UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SuhailAzhar-COBSComp171P-018UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C4CF78B2295721C00127234 /* SuhailAzhar_COBSComp171P_018UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuhailAzhar_COBSComp171P_018UITests.swift; sourceTree = "<group>"; };
 		8C4CF78D2295721C00127234 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8C4CF7A322957A5C00127234 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		B424E1BDA155EB2841932722 /* Pods-SuhailAzhar-COBSComp171P-018UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuhailAzhar-COBSComp171P-018UITests.debug.xcconfig"; path = "Target Support Files/Pods-SuhailAzhar-COBSComp171P-018UITests/Pods-SuhailAzhar-COBSComp171P-018UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BA2F6D60238A1F4EDC72AFB0 /* Pods_SuhailAzhar_COBSComp171P_018.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuhailAzhar_COBSComp171P_018.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26E81B7F5B7BDF04EEABC13 /* Pods-SuhailAzhar-COBSComp171P-018.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuhailAzhar-COBSComp171P-018.debug.xcconfig"; path = "Target Support Files/Pods-SuhailAzhar-COBSComp171P-018/Pods-SuhailAzhar-COBSComp171P-018.debug.xcconfig"; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 			children = (
 				8C4CF76F2295721A00127234 /* Main.storyboard */,
 				8C4CF7742295721B00127234 /* LaunchScreen.storyboard */,
-				8C4CF7A322957A5C00127234 /* SignUp.storyboard */,
 				1A0850FE2296134D00CE9D2D /* Home.storyboard */,
 				1A08510A22961CC500CE9D2D /* Friend.storyboard */,
 				1A0851192296280C00CE9D2D /* Homework.storyboard */,
@@ -365,7 +362,6 @@
 				8C4CF7732295721B00127234 /* Assets.xcassets in Resources */,
 				1A08510B22961CC500CE9D2D /* Friend.storyboard in Resources */,
 				8C4CF7712295721A00127234 /* Main.storyboard in Resources */,
-				8C4CF7A422957A5C00127234 /* SignUp.storyboard in Resources */,
 				1A08511A2296280C00CE9D2D /* Homework.storyboard in Resources */,
 				1A0850FD229612DA00CE9D2D /* GoogleService-Info.plist in Resources */,
 			);

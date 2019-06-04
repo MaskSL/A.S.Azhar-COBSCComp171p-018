@@ -10,11 +10,23 @@ import UIKit
 import Firebase
 
 class HomeViewController: UIViewController {
+    
+    
+    @IBOutlet weak var studentsButton: UIButton!
+    @IBOutlet weak var homeWorkButton: UIButton!
+    @IBOutlet weak var profileButton: UIButton!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Home"
+        
+        studentsButton.layer.cornerRadius = 16
+        homeWorkButton.layer.cornerRadius = 16
+        profileButton.layer.cornerRadius = 16
+        
+        
     }
     
     //Button click activating segues
